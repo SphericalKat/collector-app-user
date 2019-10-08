@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply from: '../android_common.gradle'
+
+dependencies {
+    implementation project(Modules.model)
+
+    implementation Libs.retrofit
+    implementation Libs.retrofitConverterGson
+    implementation Libs.gson
+
+//    implementation Libs.koinAndroid
+    implementation Libs.koinViewModel
+}
