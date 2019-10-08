@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':model', ':remote', ':common', ':repository'
 rootProject.name='Collector App User'
