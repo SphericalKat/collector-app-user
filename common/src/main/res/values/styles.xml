@@ -23,7 +23,7 @@
         <item name="backgroundTint">@color/colorNegative</item>
         <item name="android:fontFamily">@font/sf_rounded_medium</item>
     </style>
-    
+
     <style name="BaseText">
     </style>
     
