@@ -36,7 +36,7 @@ object Versions {
 
     const val constraintLayoutVersion = "2.0.0-beta2"
     const val recyclerViewVersion = "1.1.0-beta04"
-    const val materialVersion = "1.0.0"
+    const val materialVersion = "1.1.0-beta01"
     const val otpViewVersion = "2.0.3"
     const val materialDialogsCoreVersion = "3.1.1"
     const val spinkitVersion = "1.4.0"
