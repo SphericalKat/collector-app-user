@@ -1,0 +1,11 @@
+apply from: '../android_feature.gradle'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+
+    implementation Libs.otpView
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+}

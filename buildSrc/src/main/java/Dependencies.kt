@@ -2,6 +2,7 @@ object Modules {
     const val app = ":app"
     const val buildSrc = ":buildSrc"
     const val common = ":common"
+    const val featureAuth = ":feature-auth"
     const val model = ":model"
     const val remote = ":remote"
     const val repository = ":repository"
@@ -70,7 +71,7 @@ object Libs {
     const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerViewVersion}"
     const val material = "com.google.android.material:material:${Versions.materialVersion}"
     const val otpView = "com.github.mukeshsolanki:android-otpview-pinview:${Versions.otpViewVersion}"
-    const val materialDealogs = "com.afollestad.material-dialogs:core:${Versions.materialDialogsCoreVersion}"
+    const val materialDialogs = "com.afollestad.material-dialogs:core:${Versions.materialDialogsCoreVersion}"
     const val spinKit = "com.github.ybq:Android-SpinKit:${Versions.spinkitVersion}"
 
     //Koin

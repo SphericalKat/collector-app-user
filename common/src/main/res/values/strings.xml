@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">common</string>
+    <string name="input_error_blank">Input cannot be blank</string>
+    <string name="input_error_phone">Invalid phone number</string>
+    <string name="input_error_email">Invalid email id</string>
+    <string name="input_error_invalid">Invalid input</string>
 </resources>

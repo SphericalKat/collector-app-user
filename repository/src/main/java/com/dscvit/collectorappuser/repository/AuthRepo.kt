@@ -18,7 +18,7 @@ class AuthRepo(
         webClient.createUser(user)
     }
 
-    fun otpVerification(otp: OtpVerification) = makeRequest {
+    fun verifyOtp(otp: OtpVerification) = makeRequest {
         webClient.confirmOtp(otp)
     }
 

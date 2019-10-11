@@ -15,6 +15,8 @@ dependencies {
     api  project(Modules.remote)
     api project(Modules.common)
 
+    implementation project(Modules.featureAuth)
+
     implementation Libs.constraintLayout
     implementation Libs.material
 }
