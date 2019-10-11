@@ -2,6 +2,7 @@ object Modules {
     const val app = ":app"
     const val buildSrc = ":buildSrc"
     const val common = ":common"
+    const val featureAuth = ":feature-auth"
     const val model = ":model"
     const val remote = ":remote"
     const val repository = ":repository"

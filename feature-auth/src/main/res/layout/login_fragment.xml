@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <TextView
+            style="@style/TextBold36.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="75dp"
+            android:text="@string/login_welcome" />
+
+        <TextView
+            style="@style/TextMedium18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/login_info" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_input_phno"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_phno_input_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button_request_otp"
+            style="@style/ButtonBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/login_request_otp_button_text"
+            android:textSize="@dimen/font_size_18" />
+
+        <TextView
+            android:id="@+id/login_button_create_account"
+            style="@style/TextMedium18.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_ripple"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            android:text="@string/login_create_account_button_text" />
+    </LinearLayout>
+</ScrollView>
