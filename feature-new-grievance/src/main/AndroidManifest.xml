@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dscvit.collectorappuser.feature_auth">
+    package="com.dscvit.collectorappuser.feature_new_grievance">
 
     <application>
-        <activity android:name=".AuthActivity" />
+        <activity android:name=".NewGrievanceActivity" />
     </application>
 
 </manifest>

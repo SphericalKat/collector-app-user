@@ -1,2 +1,2 @@
-include ':app', ':model', ':remote', ':common', ':repository', ':feature-auth', ':feature-home'
+include ':app', ':model', ':remote', ':common', ':repository', ':feature-auth', ':feature-home', ':feature-new-grievance'
 rootProject.name='Collector App User'
