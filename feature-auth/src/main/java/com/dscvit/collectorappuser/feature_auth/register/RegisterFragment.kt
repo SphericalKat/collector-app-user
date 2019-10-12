@@ -1,19 +1,15 @@
 package com.dscvit.collectorappuser.feature_auth.register
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.dscvit.collectorappuser.common.base.BaseFragment
-import com.dscvit.collectorappuser.common.extensions.*
-
+import com.dscvit.collectorappuser.common.extensions.getInput
+import com.dscvit.collectorappuser.common.extensions.isValidInput
+import com.dscvit.collectorappuser.common.extensions.isValidPhone
 import com.dscvit.collectorappuser.feature_auth.R
-import com.dscvit.collectorappuser.model.Result
-import kotlinx.android.synthetic.main.login_fragment.*
 import kotlinx.android.synthetic.main.register_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
