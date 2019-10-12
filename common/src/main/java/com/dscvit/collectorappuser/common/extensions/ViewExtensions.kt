@@ -70,18 +70,14 @@ fun TextInputLayout.isValidPhone()
 fun TextInputLayout.isValidEmail()
     = isValid(Patterns.EMAIL_ADDRESS, R.string.input_error_email)
 
-fun TextInputLayout.isMatching(regex: Regex,
-                               message: String?,
-                               messageRes: Int?): Boolean {
+fun TextInputLayout.isMatching(regex: Regex, messageRes: Int?): Boolean {
 
     var isValid = true
 
     if (isValidInput()) {
         val input = this.getInput()
         if (!input.matches(regex)) {
-            this.error = message ?: context.getString(messageRes
-                ?: R.string.input_error_invalid
-            )
+            this.error = context.getString(messageRes ?: R.string.input_error_invalid)
         } else {
             isValid = false
         }

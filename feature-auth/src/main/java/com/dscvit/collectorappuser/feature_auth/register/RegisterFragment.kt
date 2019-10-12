@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
+import com.dscvit.collectorappuser.common.base.BaseFragment
 import com.dscvit.collectorappuser.common.extensions.*
 
 import com.dscvit.collectorappuser.feature_auth.R
@@ -15,11 +17,7 @@ import kotlinx.android.synthetic.main.login_fragment.*
 import kotlinx.android.synthetic.main.register_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class RegisterFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = RegisterFragment()
-    }
+class RegisterFragment : BaseFragment() {
 
     private val viewModel: RegisterViewModel by viewModel()
 
@@ -45,31 +43,19 @@ class RegisterFragment : Fragment() {
                     register_input_dob.getInput(),
                     register_input_phno.getInput()
                 )
-                    .observe(this, Observer {
-                        when (it.status) {
-                            Result.Status.LOADING -> {
-                                showLoading(true)
-                                showLayout(false)
-                            }
-                            Result.Status.ERROR -> {
-                                showLoading(false)
-                                showLayout(true)
-                                toast(it.message!!)
-                            }
-                            Result.Status.SUCCESS -> {
-
-                            }
-                        }
+                    .observe(this, getObserver {
+                        findNavController()
+                            .navigate(R.id.action_registerFragment_to_otpFragment)
                     })
             }
         }
     }
 
-    private fun showLayout(shouldShowLayout: Boolean) {
+    override fun showLayout(shouldShowLayout: Boolean) {
 
     }
 
-    private fun showLoading(shouldShowLoading: Boolean) {
+    override fun showLoading(shouldShowLoading: Boolean) {
 
     }
 }
