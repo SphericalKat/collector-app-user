@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import com.dscvit.collectorappuser.common.base.BaseFragment
 import com.dscvit.collectorappuser.common.extensions.getInput
 import com.dscvit.collectorappuser.common.extensions.isValidPhone
 import com.dscvit.collectorappuser.common.extensions.show
@@ -18,7 +19,7 @@ import kotlinx.android.synthetic.main.login_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 
-class LoginFragment : Fragment() {
+class LoginFragment : BaseFragment() {
 
     private val viewModel: LoginViewModel by viewModel()
 
@@ -34,34 +35,22 @@ class LoginFragment : Fragment() {
 
         login_button_request_otp.setOnClickListener {
             if (login_input_phno.isValidPhone()) {
+                //EspressoIdlingResours.up()
                 viewModel.login(login_input_phno.getInput())
-                    .observe(this, Observer {
-                        when (it.status) {
-                            Result.Status.LOADING -> {
-                                showLoading(true)
-                                showLayout(false)
-                            }
-                            Result.Status.ERROR -> {
-                                showLoading(false)
-                                showLayout(true)
-                                toast(it.message!!)
-                            }
-                            Result.Status.SUCCESS -> {
-                                findNavController()
-                                    .navigate(R.id.action_loginFragment_to_otpFragment)
-                            }
-                        }
+                    .observe(this, getObserver {
+                        //EspressoIdlingResours.down()
+                        findNavController()
+                            .navigate(R.id.action_loginFragment_to_otpFragment)
                     })
             }
         }
     }
 
-    private fun showLayout(shouldShowLayout: Boolean) {
+    override fun showLayout(shouldShowLayout: Boolean) {
         login_input_phno.show(shouldShowLayout)
     }
 
-    private fun showLoading(shouldShowLoading: Boolean) {
+    override fun showLoading(shouldShowLoading: Boolean) {
 
     }
-
 }

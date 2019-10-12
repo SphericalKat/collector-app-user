@@ -30,15 +30,17 @@
 
         <com.mukesh.OtpView
             android:id="@+id/otp_view"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="32dp"
             android:layout_marginTop="75dp"
             android:layout_marginEnd="32dp"
+            android:foregroundGravity="center"
+            android:gravity="center"
             android:inputType="number"
             app:itemCount="6"
-            app:lineColor="@color/colorPrimary"
-            />
+            app:lineColor="@color/colorPrimary" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/otp_button_submit"
