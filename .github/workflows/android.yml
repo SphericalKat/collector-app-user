@@ -14,4 +14,13 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: chmod a+x gradlew && ./gradlew build
+      run: git submodule sync --recursive && git submodule update --init --recursive
+
+    - name: Build
+      uses: xdtianyu/actions-android-ci@master
+      with:
+        args: '"
+        source .travis/env.sh;
+        source /opt/setup-android-sdk.sh;
+        ./gradlew assembleDebug
+        "'
