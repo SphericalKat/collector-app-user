@@ -30,6 +30,6 @@ jobs:
       with: 
         args: '"
         source /opt/setup-android-sdk.sh;
-        chmod +x gradlew
+        chmod +x gradlew;
         ./gradlew assembleDebug;
         "'
