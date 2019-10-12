@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".otp.OtpFragment">
 
     <LinearLayout
@@ -36,11 +36,17 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="75dp"
             android:layout_marginEnd="32dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:foregroundGravity="center"
             android:gravity="center"
             android:inputType="number"
+            android:itemBackground="@drawable/bg_otpview"
+            android:textColor="@android:color/black"
             app:itemCount="6"
-            app:lineColor="@color/colorPrimary" />
+            app:lineColor="@color/colorPrimary"
+            app:viewType="none"
+            tools:text="123456" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/otp_button_submit"
@@ -59,11 +65,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:clickable="true"
-            android:focusable="true"
             android:background="@drawable/bg_ripple"
+            android:clickable="true"
             android:drawableEnd="@drawable/ic_refresh_black_24dp"
             android:drawablePadding="8dp"
+            android:focusable="true"
             android:padding="8dp"
             android:text="@string/otp_resend_button_text" />
 

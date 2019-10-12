@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +37,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_rounded_regular"
                 android:hint="@string/register_enter_aadhaar_card_hint" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,6 +53,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_rounded_regular"
                 android:hint="@string/register_enter_name_hint" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,6 +69,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_rounded_regular"
                 android:hint="@string/register_enter_dob_hint" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,6 +85,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_rounded_regular"
                 android:hint="@string/login_phno_input_hint" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,11 +106,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:clickable="true"
-            android:focusable="true"
             android:background="@drawable/bg_ripple"
+            android:clickable="true"
             android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
             android:drawablePadding="8dp"
+            android:focusable="true"
             android:padding="8dp"
             android:text="@string/register_login_button_text" />
     </LinearLayout>

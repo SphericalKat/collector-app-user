@@ -36,6 +36,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
+                android:fontFamily="@font/sf_rounded_regular"
+                android:inputType="phone"
                 android:layout_height="wrap_content"
                 android:hint="@string/login_phno_input_hint" />
         </com.google.android.material.textfield.TextInputLayout>
